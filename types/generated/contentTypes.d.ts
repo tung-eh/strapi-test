@@ -521,7 +521,14 @@ export interface ApiCustomerStoryCustomerStory
     about: Schema.Attribute.Text;
     challenge: Schema.Attribute.Text;
     company_size: Schema.Attribute.String;
-    content: Schema.Attribute.Blocks;
+    conclusion: Schema.Attribute.Text;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
