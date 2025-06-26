@@ -34,6 +34,18 @@
       "relation": "manyToMany",
       "target": "api::key-feature.key-feature",
       "inversedBy": "customer_stories"
+    },
+    "challenge": {
+      "type": "text"
+    },
+    "solution": {
+      "type": "text"
+    },
+    "result": {
+      "type": "text"
+    },
+    "content": {
+      "type": "blocks"
     }
   }
 }

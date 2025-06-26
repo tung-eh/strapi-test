@@ -519,7 +519,9 @@ export interface ApiCustomerStoryCustomerStory
   };
   attributes: {
     about: Schema.Attribute.Text;
+    challenge: Schema.Attribute.Text;
     company_size: Schema.Attribute.String;
+    content: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -537,6 +539,8 @@ export interface ApiCustomerStoryCustomerStory
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    result: Schema.Attribute.Text;
+    solution: Schema.Attribute.Text;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
