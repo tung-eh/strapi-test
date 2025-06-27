@@ -519,6 +519,7 @@ export interface ApiCustomerStoryCustomerStory
   };
   attributes: {
     about: Schema.Attribute.Text;
+    banner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     challenge: Schema.Attribute.Text;
     company_size: Schema.Attribute.String;
     conclusion: Schema.Attribute.Text;
@@ -547,6 +548,7 @@ export interface ApiCustomerStoryCustomerStory
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     result: Schema.Attribute.Text;
+    slug: Schema.Attribute.UID<'title'>;
     solution: Schema.Attribute.Text;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
