@@ -28,6 +28,16 @@
         "audios"
       ]
     },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "interviewee_name": {
       "type": "string"
     },
@@ -58,15 +68,14 @@
     "result": {
       "type": "text"
     },
-    "content": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "defaultHtml"
-      }
-    },
     "conclusion": {
       "type": "text"
+    },
+    "content_blocks": {
+      "type": "blocks"
+    },
+    "content_markdown": {
+      "type": "richtext"
     }
   }
 }

@@ -523,13 +523,8 @@ export interface ApiCustomerStoryCustomerStory
     challenge: Schema.Attribute.Text;
     company_size: Schema.Attribute.String;
     conclusion: Schema.Attribute.Text;
-    content: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
+    content_blocks: Schema.Attribute.Blocks;
+    content_markdown: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -546,6 +541,7 @@ export interface ApiCustomerStoryCustomerStory
       'api::customer-story.customer-story'
     > &
       Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publishedAt: Schema.Attribute.DateTime;
     result: Schema.Attribute.Text;
     slug: Schema.Attribute.UID<'title'>;
